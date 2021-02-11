@@ -1,0 +1,26 @@
+{
+    "name": "bokalsyo/tabang",
+    "description": "Hinabang alang sa mga nanginahanglan",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "eriqamiqo",
+            "email": "ericamigo.dev@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "^8.27"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bokalsyo\\Tabang\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bokalsyo\\Tabang\\TabangServiceProvider"
+            ]
+        }
+    }
+}
