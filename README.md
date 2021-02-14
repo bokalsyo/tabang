@@ -1,4 +1,5 @@
-Hinabang alang sa mga nanginahanglan. Bokalsyo. Ang superhero sa kalibutan.
+# Bokalsyo
+Hinabang alang sa mga nanginahanglan.
 ==================
 
 ## Install (Laravel)
