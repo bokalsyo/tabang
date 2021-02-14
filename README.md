@@ -19,7 +19,7 @@ $table->customUuid();
 use Bokalsyo\Tabang\Hinabang\HasUuid;
 use Illuminate\Database\Eloquent\Model;
 
-YourModel extends Model
+class YourModel extends Model
 {
     use HasUuid;
 }
@@ -30,13 +30,23 @@ YourModel extends Model
 ```php
 $table->slug();
 ```
+is the same as
+```php
+$table->string('slug')->unique();
+```
+
+If you don't want this field to be unique and limit the length, do this.
+```php
+$table->slug(false, 100);
+$table->slug(true, null); // default value
+```
 
 **Model**
 ```php
 use Bokalsyo\Tabang\Hinabang\HasSlug;
 use Illuminate\Database\Eloquent\Model;
 
-YourModel extends Model
+class YourModel extends Model
 {
     use HasSlug;
 }
@@ -70,7 +80,7 @@ $table->creator();
 use Bokalsyo\Tabang\Hinabang\HasCreator;
 use Illuminate\Database\Eloquent\Model;
 
-YourModel extends Model
+class YourModel extends Model
 {
     use HasCreator;
 }
@@ -89,7 +99,7 @@ $table->foreign('creator_id')
     ->on('users');
 ```
 
-If you want to change the attribute being used eg (`Admin::class` model and `admins` table) you can do something like this.
+If you want to change the attributes being used eg (`Admin::class` model and `admins` table) you can do something like this.
 ```php
 $table->creator('admin_id', 'admins', 'id');
 

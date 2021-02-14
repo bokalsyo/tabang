@@ -20,8 +20,12 @@ class TabangServiceProvider extends ServiceProvider
             return $this;
         });
 
-        Blueprint::macro('slug', function ($length = null) {
-            $this->char('slug', $length)->unique();
+        Blueprint::macro('slug', function ($unique = true, $length = null) {
+            $this->string('slug', $length);
+
+            if ($unique) {
+                $this->unique('slug');
+            }
 
             return $this;
         });
