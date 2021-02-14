@@ -35,7 +35,7 @@ is the same as
 $table->string('slug')->unique();
 ```
 
-If you don't want this field to be unique and limit the length, do this.
+If you don't want this field to be unique or limit the length, do this.
 ```php
 $table->slug(false, 100);
 $table->slug(true, null); // default value
