@@ -1,7 +1,6 @@
 # Bokalsyo
 Hinabang alang sa mga nanginahanglan.
 
-==================
 
 ## Install (Laravel)
 Install via composer
