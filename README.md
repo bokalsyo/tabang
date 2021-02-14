@@ -77,8 +77,8 @@ $table->creator();
 
 **Model**
 ```php
-use Bokalsyo\Tabang\Hinabang\HasCreator;
 use Illuminate\Database\Eloquent\Model;
+use Bokalsyo\Tabang\Hinabang\HasCreator;
 
 class YourModel extends Model
 {
