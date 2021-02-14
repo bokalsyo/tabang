@@ -53,6 +53,7 @@ class YourModel extends Model
 ```
 
 **Sluggable Field**
+
 By default, it uses the field `name` as the basis of slug value by using `Str::slug()` helper method. If you want to override the default field, you can do it by adding this to your model.
 ```php
 protected function sluggableField()
