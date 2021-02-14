@@ -8,7 +8,7 @@ Install via composer
 composer require bokalsyo/tabang
 ```
 
-### UUID
+## UUID
 **Migration**
 ```php
 $table->customUuid();
@@ -25,7 +25,7 @@ class YourModel extends Model
 }
 ```
 
-### Slug
+## Slug
 **Migration**
 ```php
 $table->slug();
@@ -70,7 +70,7 @@ protected function slugConcatenator()
 }
 ```
 
-### Creator
+## Creator
 **Migration**
 ```php
 $table->creator();
