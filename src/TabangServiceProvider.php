@@ -38,5 +38,17 @@ class TabangServiceProvider extends ServiceProvider
 
             return $this;
         });
+
+        if (! function_exists('to_collection'))
+        {
+            function to_collection(array $array)
+            {
+                return collect(
+                    json_decode(
+                        json_encode($array)
+                    )
+                );
+            }
+        }
     }
 }
