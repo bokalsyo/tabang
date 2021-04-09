@@ -17,7 +17,11 @@ trait HasSlug
         });
 
         static::updating(function ($model) {
-            $model->slug = Str::slug($model->{$model->sluggableField()}, $model->slugConcatenator());
+            $slug = empty($model->slug) ?
+                Str::slug($model->{$model->sluggableField()}, $model->slugConcatenator()) :
+                $model->slug;
+
+            $model->slug = $slug;
         });
     }
 
